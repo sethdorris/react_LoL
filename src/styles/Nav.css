@@ -1,0 +1,55 @@
+﻿nav {
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid #bbb;
+  transform: translateX(0);
+  transition: 1s all;
+}
+
+#top-nav {
+  display: flex;
+  align-items:center;
+}
+
+#top-nav span {
+  position: absolute;
+  right: 10%;
+}
+
+nav.active {
+  transform: translateX(100px);
+}
+
+.container button {
+    position: absolute;
+    left: 5%;
+    font-size: 16pt;
+    align-self: center;
+    background: none;
+    border: none;
+}
+
+#nav-panel {
+  position: absolute;
+  top: 0;
+  z-index: 6;
+  width: 350px;
+  height: 100vh;
+  border-right: 1px solid #161626;
+  left: -370px;
+  transform: translateX(0);
+  transition: .5s all;
+  background: white;
+  color: teal;
+}
+
+#nav-panel.active {
+  transform: translateX(370px);
+}
+
+#nav-panel.closed {
+  transform: translateX(-370px);
+}
+.container {
+    display: flex;
+}

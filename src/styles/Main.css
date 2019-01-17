@@ -1,0 +1,23 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #fff;
+}
+
+.backdrop {
+  background: grey;
+  opacity: 0;
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: opacity .25s ease, height 0s linear 0s;
+}
+
+.backdrop.active {
+  opacity: 0.7;
+}
