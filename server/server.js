@@ -18,6 +18,4 @@ app.get("/", (req, res, next) => {
 app.get("/GetStats", StatsController.GetStats)
 
 /** start server */
-app.listen(process.env.PORT || 3000, () => {
-    console.log(`Server started.`);
-});
+app.listen(process.env.PORT, '0.0.0.0');

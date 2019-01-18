@@ -20,9 +20,9 @@ class Navigation extends Component {
         return (
         <div className="container">
           <TopNav handle={this.state.handle}></TopNav>
-          <SidePanel menuClick={this.menuClick}></SidePanel>
-          <BackDrop isActive={this.state.showPanel}></BackDrop>
+          <SidePanel className="navigationBar" menuClick={this.menuClick}></SidePanel>
           <ContentView></ContentView>
+          <BackDrop isActive={this.state.showPanel}></BackDrop>
         </div>
       );
     }

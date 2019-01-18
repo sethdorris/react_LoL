@@ -30,6 +30,10 @@
   color: teal;
 }
 
+.navigationBar {
+    height: inherit;
+}
+
 #nav-panel.active {
   transform: translateX(370px);
 }

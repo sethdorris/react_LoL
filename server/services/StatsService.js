@@ -19,7 +19,7 @@ module.exports = {
         let summonerData = summonerGet.data;
 
         console.log(`${GetMatchesByAccountId}${summonerData.accountId}`);
-        let matchesGet = await axios.get(`${GetMatchesByAccountId}${summonerData.accountId}?api_key=${key}&beginIndex=0&endIndex=10`);
+        let matchesGet = await axios.get(`${GetMatchesByAccountId}${summonerData.accountId}?api_key=${key}&beginIndex=0&endIndex=4`);
         let matchesData = matchesGet.data;
 
         let matchDetailsGet = matchesData.matches.map(match => GetMatchDetails(match.gameId));

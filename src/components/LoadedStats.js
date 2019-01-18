@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-import Matches from './matches';
+import Matches from './Matches';
 import PropTypes from 'prop-types';
 
 
