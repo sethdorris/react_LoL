@@ -4,8 +4,6 @@ const path = require("path")
 const StatsController = require("./controllers/StatsController");
 const app = express()
 
-let port = 5000 || process.env.PORT
-
 
 app.use(bodyParser.json())
 
@@ -20,6 +18,6 @@ app.get("/", (req, res, next) => {
 app.get("/GetStats", StatsController.GetStats)
 
 /** start server */
-app.listen(port, () => {
-    console.log(`Server started at port: ${port}`);
+app.listen(3000, () => {
+    console.log(`Server started at port 3000`);
 });
