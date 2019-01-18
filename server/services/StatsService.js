@@ -1,5 +1,5 @@
 ﻿const axios = require("axios");
-const key = require("../.env").StatsAPIKey || process.env.StatsAPIKey;
+const key = process.env.StatsAPIKey;
 const GetSummonerUrl = "https://na1.api.riotgames.com/lol/summoner/v3/summoners/by-name/BruiseR";
 const GetMatchesByAccountId = "https://na1.api.riotgames.com/lol/match/v3/matchlists/by-account/";
 const GetMatchDetailsUrl = "https://na1.api.riotgames.com/lol/match/v3/matches/";
