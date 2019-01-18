@@ -1,4 +1,4 @@
-﻿nav {
+﻿#top-nav {
   height: 50px;
   width: 100%;
   border-bottom: 1px solid #bbb;
@@ -14,19 +14,6 @@
 #top-nav span {
   position: absolute;
   right: 10%;
-}
-
-nav.active {
-  transform: translateX(100px);
-}
-
-.container button {
-    position: absolute;
-    left: 5%;
-    font-size: 16pt;
-    align-self: center;
-    background: none;
-    border: none;
 }
 
 #nav-panel {
@@ -49,7 +36,4 @@ nav.active {
 
 #nav-panel.closed {
   transform: translateX(-370px);
-}
-.container {
-    display: flex;
 }

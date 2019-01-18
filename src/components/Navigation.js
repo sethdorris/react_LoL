@@ -2,29 +2,27 @@
 import TopNav from './TopNav';
 import SidePanel from './SidePanel';
 import BackDrop from './BackDrop';
+import ContentView from './ContentView';
 import NavStyles from '../styles/Nav.css';
 import MainStyles from '../styles/Main.css';
 
 class Navigation extends Component {
-    constructor(props, context) {
-        super(props, context)
-        this.state = {
-            handle: "Summoner",
-            showPanel: false
-        }
+    state = {
+        handle: "Summoner",
+        showPanel: false
     }
 
     menuClick = e => {
-        console.log("Clicked")
+      this.setState(prev => ({ showPanel: !prev.showPanel }))
     }
 
     render() {
         return (
         <div className="container">
-          <button className="fa fa-bars" onClick={this.menuClick}></button>
           <TopNav handle={this.state.handle}></TopNav>
-          <SidePanel></SidePanel>
-          <BackDrop></BackDrop>
+          <SidePanel menuClick={this.menuClick}></SidePanel>
+          <BackDrop isActive={this.state.showPanel}></BackDrop>
+          <ContentView></ContentView>
         </div>
       );
     }
