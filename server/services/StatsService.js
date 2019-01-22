@@ -5,6 +5,7 @@ const GetMatchesByAccountId = "https://na1.api.riotgames.com/lol/match/v3/matchl
 const GetMatchDetailsUrl = "https://na1.api.riotgames.com/lol/match/v3/matches/";
 
 GetMatchDetails = async (mid) => {
+    //silly goose using new Promise around a promise-based API in axios ..should fix.
     return new Promise((resolve, reject) => {
         return axios.get(`${GetMatchDetailsUrl}${mid}?api_key=${key}`).then(data => {
             return resolve(data.data);
